@@ -238,51 +238,123 @@ function Home() {
         </div>
 
         {/* copy */}
-        <div className="relative z-10 mx-auto w-full max-w-7xl px-6 pt-28 pb-24">
+        <div className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 pt-24 sm:pt-28 pb-16 sm:pb-24">
           <div className="max-w-2xl">
-            <p className="inline-flex items-center gap-2 rounded-full border border-gold/50 bg-deep/50 px-4 py-1.5 text-xs font-bold tracking-[0.3em] text-gold-soft uppercase backdrop-blur">
+            <p className="inline-flex items-center gap-2 rounded-full border border-gold/50 bg-deep/60 px-3.5 py-1 text-[11px] sm:text-xs font-bold tracking-[0.25em] text-gold-soft uppercase backdrop-blur">
               🪔 விருந்து சாப்பாடு · Since Tamil Nadu
             </p>
-            <h1 className="mt-6 font-display text-5xl leading-[1.05] font-black text-primary-foreground drop-shadow-xl sm:text-6xl xl:text-7xl">
+            <h1 className="mt-4 sm:mt-6 font-display text-4xl leading-[1.08] font-black text-primary-foreground drop-shadow-xl xs:text-5xl sm:text-6xl xl:text-7xl">
               Kamatchi
               <span className="text-gradient-gold block">Catering</span>
             </h1>
-            <p className="mt-3 font-body text-xl font-semibold text-gold-soft">
+            <p className="mt-2 sm:mt-3 font-body text-lg sm:text-xl font-semibold text-gold-soft">
               காமாட்சி கேட்டரிங்
             </p>
-            <p className="mt-5 max-w-xl text-lg leading-relaxed text-primary-foreground/85">
+            <p className="mt-3 sm:mt-5 max-w-xl text-base sm:text-lg leading-relaxed text-primary-foreground/90">
               Weddings, temple festivals and family functions catered the traditional way —
               stone-ground masalas, dum-cooked biryani and a full{" "}
               <span className="font-bold text-gold-soft">banana leaf virundhu</span> served hot at
               your venue.
             </p>
-            <div className="mt-8 flex flex-wrap gap-4">
+
+            {/* Mobile 3D Animated Floating Dishes Strip */}
+            <div className="mt-6 block lg:hidden">
+              <p className="mb-2.5 text-[11px] font-bold tracking-widest text-gold-soft uppercase">
+                ✨ மணக்கும் விருந்து சிறப்புகள் · Signature Feasts
+              </p>
+              <div className="flex gap-3 overflow-x-auto pb-2 scrollbar-none snap-x snap-mandatory">
+                <div className="floaty-mobile shrink-0 w-40 snap-start rounded-2xl border-2 border-gold/60 bg-deep/85 p-2 shadow-xl backdrop-blur-md">
+                  <img
+                    src={biryani}
+                    alt="Dum biryani"
+                    width={200}
+                    height={200}
+                    className="h-20 w-full rounded-xl object-cover"
+                  />
+                  <div className="p-1 text-center">
+                    <p className="text-xs font-bold text-primary-foreground truncate">Dum Biryani</p>
+                    <p className="text-[10px] font-medium text-gold-soft">தம் பிரியாணி</p>
+                  </div>
+                </div>
+                <div
+                  className="floaty-mobile shrink-0 w-40 snap-start rounded-2xl border-2 border-leaf/70 bg-deep/85 p-2 shadow-xl backdrop-blur-md"
+                  style={{ animationDelay: "1.2s" }}
+                >
+                  <img
+                    src={tiffin}
+                    alt="Morning tiffin"
+                    width={200}
+                    height={200}
+                    className="h-20 w-full rounded-xl object-cover"
+                  />
+                  <div className="p-1 text-center">
+                    <p className="text-xs font-bold text-primary-foreground truncate">Morning Tiffin</p>
+                    <p className="text-[10px] font-medium text-leaf-soft">காலை டிபன்</p>
+                  </div>
+                </div>
+                <div
+                  className="floaty-mobile shrink-0 w-40 snap-start rounded-2xl border-2 border-gold/60 bg-deep/85 p-2 shadow-xl backdrop-blur-md"
+                  style={{ animationDelay: "2.4s" }}
+                >
+                  <img
+                    src={sweets}
+                    alt="Sweets and Payasam"
+                    width={200}
+                    height={200}
+                    className="h-20 w-full rounded-xl object-cover"
+                  />
+                  <div className="p-1 text-center">
+                    <p className="text-xs font-bold text-primary-foreground truncate">Sweets & Payasam</p>
+                    <p className="text-[10px] font-medium text-gold-soft">இனிப்பு & பாயாசம்</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row flex-wrap gap-3">
               <Link
                 to="/menu"
-                className="glow-pulse rounded-full bg-gold px-8 py-4 font-display text-base font-bold text-deep shadow-xl transition-transform hover:scale-105"
+                className="w-full sm:w-auto text-center glow-pulse rounded-full bg-gold px-8 py-3.5 font-display text-base font-bold text-deep shadow-xl transition-transform active:scale-95 hover:scale-105"
               >
-                Explore the Menu
+                Explore the Menu · மெனு
               </Link>
               <Link
                 to="/contact"
-                className="rounded-full border-2 border-primary-foreground/40 bg-primary-foreground/10 px-8 py-4 font-display text-base font-bold text-primary-foreground backdrop-blur transition-colors hover:border-gold hover:text-gold-soft"
+                className="w-full sm:w-auto text-center rounded-full border-2 border-primary-foreground/40 bg-primary-foreground/10 px-8 py-3.5 font-display text-base font-bold text-primary-foreground backdrop-blur transition-all active:scale-95 hover:border-gold hover:text-gold-soft"
               >
-                Book Your Feast
+                Book Your Feast · முன்பதிவு
               </Link>
+              <a
+                href="https://wa.me/917824889665?text=Hello%20Kamatchi%20Catering,%20I%20would%20like%20to%20inquire%20about%20catering%20services"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full bg-[#25D366] px-6 py-3.5 font-display text-sm font-bold text-white shadow-lg transition-transform active:scale-95 hover:bg-[#20ba59]"
+              >
+                <span>💬 WhatsApp Quick Inquiry</span>
+              </a>
             </div>
 
-            <div className="mt-10 flex flex-wrap gap-x-10 gap-y-4 text-primary-foreground/85">
-              <div>
-                <p className="font-display text-3xl font-black text-gold">200+</p>
-                <p className="text-xs tracking-widest uppercase">Dishes on our menu</p>
+            {/* Mobile-optimized glassmorphic stats bar */}
+            <div className="mt-8 grid grid-cols-3 divide-x divide-white/15 rounded-2xl border border-gold/40 bg-deep/75 p-3 text-center backdrop-blur-md shadow-lg sm:mt-10 sm:p-4">
+              <div className="px-1.5 sm:px-2">
+                <p className="font-display text-2xl sm:text-3xl font-black text-gold">200+</p>
+                <p className="text-[10px] sm:text-xs font-semibold tracking-wider text-primary-foreground/80 uppercase">
+                  Dishes · உணவுகள்
+                </p>
               </div>
-              <div>
-                <p className="font-display text-3xl font-black text-gold">Veg & Non-Veg</p>
-                <p className="text-xs tracking-widest uppercase">Separate kitchens</p>
+              <div className="px-1.5 sm:px-2">
+                <p className="font-display text-sm sm:text-xl font-black text-gold leading-tight">
+                  Veg & Non-Veg
+                </p>
+                <p className="text-[10px] sm:text-xs font-semibold tracking-wider text-primary-foreground/80 uppercase">
+                  Separate Kitchens
+                </p>
               </div>
-              <div>
-                <p className="font-display text-3xl font-black text-gold">Live</p>
-                <p className="text-xs tracking-widest uppercase">Counters at your venue</p>
+              <div className="px-1.5 sm:px-2">
+                <p className="font-display text-2xl sm:text-3xl font-black text-gold">Live</p>
+                <p className="text-[10px] sm:text-xs font-semibold tracking-wider text-primary-foreground/80 uppercase">
+                  Counters · அரங்குகள்
+                </p>
               </div>
             </div>
           </div>
@@ -304,23 +376,23 @@ function Home() {
       </div>
 
       {/* ================= FEATURED ================= */}
-      <section className="mx-auto max-w-7xl px-6 py-20">
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 py-14 sm:py-20">
         <Reveal>
           <p className="text-center text-xs font-bold tracking-[0.35em] text-leaf uppercase">
-            சுவையான சிறப்புகள்
+            சுவையான சிறப்புகள் · SIGNATURE FEASTS
           </p>
-          <h2 className="mt-2 text-center font-display text-4xl font-black sm:text-5xl">
+          <h2 className="mt-2 text-center font-display text-3xl sm:text-4xl lg:text-5xl font-black">
             Our Signature <span className="text-gradient-gold">Feast Categories</span>
           </h2>
         </Reveal>
-        <div className="mt-12 grid gap-8 md:grid-cols-3">
+        <div className="mt-8 sm:mt-12 grid gap-5 sm:gap-8 md:grid-cols-3">
           {[
             { img: tiffin, cat: menuCategories[0]! },
             { img: biryani, cat: menuCategories.find((c) => c.id === "biryani")! },
             { img: sweets, cat: menuCategories.find((c) => c.id === "sweets")! },
           ].map(({ img, cat }, i) => (
             <Reveal key={cat.id} delay={i * 120}>
-              <Link to="/menu">
+              <Link to="/menu" className="block active:scale-[0.98] transition-transform">
                 <TiltCard className="group overflow-hidden rounded-3xl border border-border bg-card shadow-lg">
                   <div className="overflow-hidden">
                     <img
@@ -329,14 +401,16 @@ function Home() {
                       width={1024}
                       height={1024}
                       loading="lazy"
-                      className="h-56 w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      className="h-48 sm:h-56 w-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />
                   </div>
-                  <div className="p-6">
+                  <div className="p-5 sm:p-6">
                     <p className="text-xs font-bold tracking-[0.25em] text-leaf">{cat.tamil}</p>
-                    <h3 className="mt-1 font-display text-2xl font-bold">{cat.title}</h3>
-                    <p className="mt-2 text-sm text-muted-foreground">{cat.blurb}</p>
-                    <p className="mt-4 text-sm font-bold text-primary">
+                    <h3 className="mt-1 font-display text-xl sm:text-2xl font-bold">{cat.title}</h3>
+                    <p className="mt-1.5 sm:mt-2 text-xs sm:text-sm text-muted-foreground line-clamp-2">
+                      {cat.blurb}
+                    </p>
+                    <p className="mt-3 sm:mt-4 text-xs sm:text-sm font-bold text-primary">
                       {cat.dishes.length}+ உணவுகள் · items →
                     </p>
                   </div>
@@ -348,26 +422,28 @@ function Home() {
       </section>
 
       {/* ================= OCCASIONS ================= */}
-      <section className="bg-muted py-20">
-        <div className="mx-auto max-w-7xl px-6">
+      <section className="bg-muted py-14 sm:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <Reveal>
             <p className="text-center text-xs font-bold tracking-[0.35em] text-leaf uppercase">
-              நாங்கள் சமைக்கும் நிகழ்வுகள்
+              நாங்கள் சமைக்கும் நிகழ்வுகள் · OCCASIONS
             </p>
-            <h2 className="mt-2 text-center font-display text-4xl font-black sm:text-5xl">
+            <h2 className="mt-2 text-center font-display text-3xl sm:text-4xl lg:text-5xl font-black">
               Every Occasion, <span className="text-gradient-gold">One Kitchen</span>
             </h2>
           </Reveal>
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-8 sm:mt-12 grid gap-4 sm:gap-6 grid-cols-1 xs:grid-cols-2 lg:grid-cols-4">
             {occasions.map((o, i) => (
               <Reveal key={o.title} delay={i * 100}>
-                <TiltCard className="h-full rounded-2xl border border-border bg-card p-6 text-center shadow-md">
-                  <div className="sway mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-accent/40 text-3xl">
+                <TiltCard className="h-full rounded-2xl border border-border bg-card p-5 sm:p-6 text-center shadow-md active:scale-[0.98] transition-transform">
+                  <div className="sway mx-auto flex h-14 w-14 sm:h-16 sm:w-16 items-center justify-center rounded-full bg-accent/40 text-2xl sm:text-3xl">
                     {o.icon}
                   </div>
-                  <p className="mt-4 text-xs font-bold tracking-[0.2em] text-primary">{o.tamil}</p>
-                  <h3 className="mt-1 font-display text-xl font-bold">{o.title}</h3>
-                  <p className="mt-2 text-sm text-muted-foreground">{o.desc}</p>
+                  <p className="mt-3 sm:mt-4 text-xs font-bold tracking-[0.2em] text-primary">
+                    {o.tamil}
+                  </p>
+                  <h3 className="mt-1 font-display text-lg sm:text-xl font-bold">{o.title}</h3>
+                  <p className="mt-1.5 text-xs sm:text-sm text-muted-foreground">{o.desc}</p>
                 </TiltCard>
               </Reveal>
             ))}
@@ -376,14 +452,14 @@ function Home() {
       </section>
 
       {/* ================= WHY KAMATCHI ================= */}
-      <section className="mx-auto max-w-7xl px-6 py-20">
-        <div className="grid items-center gap-12 lg:grid-cols-2">
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 py-14 sm:py-20">
+        <div className="grid items-center gap-8 sm:gap-12 lg:grid-cols-2">
           <Reveal>
             <p className="text-xs font-bold tracking-[0.35em] text-leaf uppercase">ஏன் காமாட்சி?</p>
-            <h2 className="mt-2 font-display text-4xl font-black sm:text-5xl">
+            <h2 className="mt-2 font-display text-3xl sm:text-4xl lg:text-5xl font-black">
               Cooked Like Home, <span className="text-gradient-gold">Served Like a Wedding</span>
             </h2>
-            <p className="mt-4 text-muted-foreground">
+            <p className="mt-3 sm:mt-4 text-sm sm:text-base text-muted-foreground leading-relaxed">
               Kamatchi Catering is run by proprietor{" "}
               <span className="font-bold text-foreground">Pream Kumar M</span> — a kitchen that
               treats every function like a family wedding: fresh produce from the morning market,
@@ -391,18 +467,18 @@ function Home() {
             </p>
             <Link
               to="/about"
-              className="mt-6 inline-block rounded-full border-2 border-primary px-7 py-3 font-display font-bold text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
+              className="mt-5 sm:mt-6 inline-block rounded-full border-2 border-primary px-6 sm:px-7 py-2.5 sm:py-3 font-display text-sm sm:text-base font-bold text-primary transition-colors hover:bg-primary hover:text-primary-foreground active:scale-95"
             >
-              Our Story
+              Our Story · எங்கள் வரலாறு
             </Link>
           </Reveal>
-          <div className="grid gap-5 sm:grid-cols-2">
+          <div className="grid gap-3 sm:gap-5 grid-cols-2">
             {whys.map((w, i) => (
               <Reveal key={w.title} delay={i * 100}>
-                <TiltCard className="h-full rounded-2xl border border-border bg-card p-6 shadow-md">
-                  <p className="font-display text-2xl font-black text-gold">{w.tamil}</p>
-                  <h3 className="mt-1 font-display text-lg font-bold">{w.title}</h3>
-                  <p className="mt-2 text-sm text-muted-foreground">{w.desc}</p>
+                <TiltCard className="h-full rounded-2xl border border-border bg-card p-4 sm:p-6 shadow-md">
+                  <p className="font-display text-xl sm:text-2xl font-black text-gold">{w.tamil}</p>
+                  <h3 className="mt-1 font-display text-base sm:text-lg font-bold">{w.title}</h3>
+                  <p className="mt-1 text-xs sm:text-sm text-muted-foreground">{w.desc}</p>
                 </TiltCard>
               </Reveal>
             ))}
@@ -412,38 +488,38 @@ function Home() {
 
       {/* ================= COMPLETED EVENTS GALLERY ================= */}
       {eventPhotos.length > 0 && (
-        <section className="bg-muted py-20">
-          <div className="mx-auto max-w-7xl px-6">
+        <section className="bg-muted py-14 sm:py-20">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6">
             <Reveal>
               <p className="text-center text-xs font-bold tracking-[0.35em] text-leaf uppercase">
                 நிறைவுற்ற நிகழ்வுகள் · COMPLETED EVENTS
               </p>
-              <h2 className="mt-2 text-center font-display text-4xl font-black sm:text-5xl">
+              <h2 className="mt-2 text-center font-display text-3xl sm:text-4xl lg:text-5xl font-black">
                 Moments from Our <span className="text-gradient-gold">Recent Feasts</span>
               </h2>
-              <p className="mx-auto mt-3 max-w-2xl text-center text-sm text-muted-foreground sm:text-base">
+              <p className="mx-auto mt-2 max-w-2xl text-center text-xs sm:text-base text-muted-foreground">
                 நாங்கள் சமைத்து பரிமாறிய கல்யாண விருந்து மற்றும் விசேஷங்களின் புகைப்படங்கள்.
               </p>
             </Reveal>
 
-            <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="mt-8 sm:mt-12 grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {eventPhotos.map((photo, i) => (
                 <Reveal key={photo.id} delay={i * 100}>
-                  <TiltCard className="group overflow-hidden rounded-3xl border border-border bg-card shadow-md">
+                  <TiltCard className="group overflow-hidden rounded-3xl border border-border bg-card shadow-md active:scale-[0.98] transition-transform">
                     <div className="overflow-hidden">
                       <img
                         src={photo.image_url}
                         alt={photo.title}
-                        className="h-64 w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        className="h-52 sm:h-64 w-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />
                     </div>
-                    <div className="p-5">
+                    <div className="p-4 sm:p-5">
                       {photo.event_type && (
                         <span className="rounded-full bg-leaf/15 px-3 py-0.5 text-xs font-bold text-leaf">
                           {photo.event_type}
                         </span>
                       )}
-                      <h3 className="mt-2 font-display text-xl font-bold text-foreground">
+                      <h3 className="mt-2 font-display text-lg sm:text-xl font-bold text-foreground">
                         {photo.title}
                       </h3>
                       {photo.title_tamil && (
@@ -462,29 +538,35 @@ function Home() {
 
       {/* ================= CUSTOMER REVIEWS PREVIEW ================= */}
       {homeReviews.length > 0 && (
-        <section className="mx-auto max-w-7xl px-6 py-20">
+        <section className="mx-auto max-w-7xl px-4 sm:px-6 py-14 sm:py-20">
           <Reveal>
             <p className="text-center text-xs font-bold tracking-[0.35em] text-leaf uppercase">
               விருந்தினர் மதிப்புரைகள் · GUEST REVIEWS
             </p>
-            <h2 className="mt-2 text-center font-display text-4xl font-black sm:text-5xl">
+            <h2 className="mt-2 text-center font-display text-3xl sm:text-4xl lg:text-5xl font-black">
               Loved by <span className="text-gradient-gold">Families Across Tamil Nadu</span>
             </h2>
-            <p className="mx-auto mt-3 max-w-2xl text-center text-sm text-muted-foreground sm:text-base">
+            <p className="mx-auto mt-2 max-w-2xl text-center text-xs sm:text-base text-muted-foreground">
               எங்கள் விருந்துண்ட மக்களின் உண்மையான கருத்துக்கள்.
             </p>
           </Reveal>
 
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-8 sm:mt-12 grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {homeReviews.map((r, i) => (
               <Reveal key={r.id} delay={i * 120}>
-                <TiltCard className="flex h-full flex-col justify-between rounded-2xl border border-border bg-card p-6 shadow-sm">
+                <TiltCard className="flex h-full flex-col justify-between rounded-2xl border border-border bg-card p-5 sm:p-6 shadow-sm active:scale-[0.98] transition-transform">
                   <div>
-                    <div className="flex text-amber-500">{"★".repeat(r.rating)}</div>
-                    <p className="mt-3 text-sm leading-relaxed text-foreground/90">"{r.comment}"</p>
+                    <div className="flex text-amber-500 text-sm sm:text-base">
+                      {"★".repeat(r.rating)}
+                    </div>
+                    <p className="mt-2.5 text-xs sm:text-sm leading-relaxed text-foreground/90">
+                      "{r.comment}"
+                    </p>
                   </div>
-                  <div className="mt-6 border-t border-border/50 pt-3">
-                    <p className="font-display font-bold text-foreground">{r.name}</p>
+                  <div className="mt-5 border-t border-border/50 pt-3">
+                    <p className="font-display text-sm sm:text-base font-bold text-foreground">
+                      {r.name}
+                    </p>
                     {r.location && <p className="text-xs text-muted-foreground">📍 {r.location}</p>}
                   </div>
                 </TiltCard>
@@ -492,10 +574,10 @@ function Home() {
             ))}
           </div>
 
-          <div className="mt-10 text-center">
+          <div className="mt-8 sm:mt-10 text-center">
             <Link
               to="/reviews"
-              className="inline-flex items-center gap-2 rounded-full border-2 border-primary px-8 py-3.5 font-display font-bold text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full border-2 border-primary px-6 sm:px-8 py-3 sm:py-3.5 font-display text-sm sm:text-base font-bold text-primary transition-colors hover:bg-primary hover:text-primary-foreground active:scale-95"
             >
               <span>Read All Reviews & Share Yours · கருத்துக்களைப் பார்க்க →</span>
             </Link>
@@ -504,29 +586,65 @@ function Home() {
       )}
 
       {/* ================= CTA ================= */}
-      <section className="relative overflow-hidden bg-leaf-deep py-20">
+      <section className="relative overflow-hidden bg-leaf-deep py-14 sm:py-20">
         <div className="leaf-divider absolute top-0 inset-x-0" />
-        <div className="mx-auto max-w-3xl px-6 text-center">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 text-center">
           <Reveal>
             <p className="text-xs font-bold tracking-[0.35em] text-gold-soft uppercase">
               உங்கள் விருந்து, நம் பொறுப்பு
             </p>
-            <h2 className="mt-3 font-display text-4xl font-black text-primary-foreground sm:text-5xl">
+            <h2 className="mt-2 sm:mt-3 font-display text-3xl sm:text-4xl lg:text-5xl font-black text-primary-foreground">
               Let's Plan Your Banana Leaf Feast
             </h2>
-            <p className="mt-4 text-primary-foreground/80">
+            <p className="mt-3 sm:mt-4 text-xs sm:text-base text-primary-foreground/80 leading-relaxed">
               Tell us the date and the guest count — we'll bring the menu, the cooks and the
               counters.
             </p>
-            <Link
-              to="/contact"
-              className="glow-pulse mt-8 inline-block rounded-full bg-gold px-10 py-4 font-display text-lg font-bold text-deep shadow-xl transition-transform hover:scale-105"
-            >
-              Get a Quote
-            </Link>
+            <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row justify-center gap-3">
+              <Link
+                to="/contact"
+                className="glow-pulse rounded-full bg-gold px-8 py-3.5 font-display text-base sm:text-lg font-bold text-deep shadow-xl transition-transform active:scale-95 hover:scale-105"
+              >
+                Get a Quote · மதிப்பீடு பெற
+              </Link>
+              <a
+                href="https://wa.me/917824889665"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-[#25D366] px-8 py-3.5 font-display text-base sm:text-lg font-bold text-white shadow-xl transition-transform active:scale-95 hover:bg-[#20ba59]"
+              >
+                <span>💬 WhatsApp Quick Chat</span>
+              </a>
+            </div>
           </Reveal>
         </div>
       </section>
+
+      {/* ================= FLOATING STICKY ACTION BAR FOR PHONE SCREENS ================= */}
+      <div className="fixed bottom-3 inset-x-3 z-40 block md:hidden pointer-events-auto">
+        <div className="flex items-center justify-between gap-1.5 rounded-full border border-gold/40 bg-deep/95 p-1.5 shadow-2xl backdrop-blur-xl">
+          <a
+            href="tel:+917824889665"
+            className="flex-1 flex items-center justify-center gap-1 rounded-full bg-gold/15 py-2.5 text-xs font-bold text-gold active:bg-gold active:text-deep transition-all"
+          >
+            <span>📞 Call</span>
+          </a>
+          <a
+            href="https://wa.me/917824889665?text=Hello%20Kamatchi%20Catering,%20I%20would%20like%20to%20inquire%20about%20catering%20services"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-1 flex items-center justify-center gap-1 rounded-full bg-[#25D366] py-2.5 text-xs font-bold text-white shadow-md active:scale-95 transition-transform"
+          >
+            <span>💬 WhatsApp</span>
+          </a>
+          <Link
+            to="/menu"
+            className="flex-1 flex items-center justify-center gap-1 rounded-full bg-primary py-2.5 text-xs font-bold text-primary-foreground active:scale-95 transition-transform"
+          >
+            <span>📋 Menu</span>
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }

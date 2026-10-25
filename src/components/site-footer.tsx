@@ -93,7 +93,7 @@ export function SiteFooter() {
         </div>
       </div>
 
-      <div className="border-t border-white/10 py-5 text-center text-xs text-primary-foreground/60 flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
+      <div className="border-t border-white/10 pt-5 pb-20 md:pb-5 text-center text-xs text-primary-foreground/60 flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
         <span>
           © {new Date().getFullYear()} Kamatchi Catering · Proprietor{" "}
           <span className="text-gold-soft">Pream Kumar M</span> · Made with tradition in Tamil Nadu

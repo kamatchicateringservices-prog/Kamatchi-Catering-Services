@@ -229,6 +229,36 @@
   opacity: 1;
 }
 
+/* Mobile-optimized 3D animations and touch dynamics */
+@keyframes floaty-mobile {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(0.8deg);
+  }
+}
+
+.floaty-mobile {
+  animation: floaty-mobile 4.5s ease-in-out infinite;
+}
+
+@media (max-width: 640px) {
+  .reveal {
+    transform: perspective(600px) rotateX(6deg) translateY(24px);
+    transition:
+      opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .tilt-card {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .tilt-card:active {
+    transform: scale(0.97) translateY(2px);
+  }
+}
+
 /* ---------- Leaf edge divider ---------- */
 
 .leaf-divider {
