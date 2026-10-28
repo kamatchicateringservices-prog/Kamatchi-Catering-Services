@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <radialGradient id="bg" cx="45%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#6b1720"/>
+      <stop offset="65%" stop-color="#3c080e"/>
+      <stop offset="100%" stop-color="#1e0406"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF2B2"/>
+      <stop offset="35%" stop-color="#E5B942"/>
+      <stop offset="70%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#996F10"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="1.5" stdDeviation="1.5" flood-color="#000" flood-opacity="0.7"/>
+    </filter>
+  </defs>
+  <!-- Background Disc -->
+  <circle cx="50" cy="50" r="48" fill="url(#bg)"/>
+  <!-- Outer & Inner Gold Accents -->
+  <circle cx="50" cy="50" r="46" fill="none" stroke="url(#gold)" stroke-width="2.5"/>
+  <circle cx="50" cy="50" r="42" fill="none" stroke="url(#gold)" stroke-width="0.75" stroke-dasharray="1.5, 2"/>
+  <!-- Tamil Letter Ka (க) -->
+  <text x="50" y="66" font-family="'Fraunces', 'Catamaran', 'Noto Sans Tamil', 'Tamil Sangam MN', serif, sans-serif" font-size="44" font-weight="bold" text-anchor="middle" fill="url(#gold)" filter="url(#glow)">க</text>
+</svg>

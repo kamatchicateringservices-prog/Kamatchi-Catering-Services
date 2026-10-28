@@ -289,3 +289,18 @@
     background: color-mix(in oklab, var(--gold) 40%, transparent);
   }
 }
+
+/* Ensure Lovable badges or watermarks injected by host are completely hidden */
+#lovable-badge,
+.lovable-badge,
+[id*="lovable-badge"],
+[class*="lovable-badge"],
+[data-lovable-badge],
+a[href*="lovable.dev"],
+div:has(> a[href*="lovable.dev"]) {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
